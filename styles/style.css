@@ -1,0 +1,21 @@
+.cards {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .card {
+    flex: 1; /* equal height and width */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+
+  /* Tablets and below */
+  @media (max-width: 900px) {
+    .cards {
+      flex-direction: column;
+    }
+  }
