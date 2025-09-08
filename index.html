@@ -20,6 +20,8 @@
             <h2>Card</h2>
             <p>Display a card with content with text content or copy.</p>
 
+            <h3>Preview</h3>
+
             <div class="cards">
                 <div class="card">
                     <h3>Card 1</h3>
@@ -35,6 +37,59 @@
                     <p>Extra paragraph just to make it taller!</p>
                 </div>
             </div>
+
+            <h3>Code</h3>
+
+            <pre>
+                <code>
+&lt;div class="cards">
+    &lt;div class="card">
+        &lt;h3>Card 1&lt;/h3>
+        &lt;p>This card has a small amount of content.&lt;/p>
+    &lt;/div>
+    &lt;div class="card">
+        &lt;h3>Card 2&lt;/h3>
+        &lt;p>This one has a bit more content than the first card. It demonstrates how the height balances out across all the cards.&lt;/p>
+    &lt;/div>
+    &lt;div class="card">
+        &lt;h3>Card 3&lt;/h3>
+        &lt;p>This is the longest card. It has the most content of the three, ensuring that the height is determined by this one and the others stretch to match.&lt;/p>
+        &lt;p>Extra paragraph just to make it taller!&lt;/p>
+    &lt;/div>
+&lt;/div>        
+                </code>
+            </pre>
+
+            <pre>
+                <code>
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Tablets and above */
+@media (min-width: 900px) {
+    .cards {
+        flex-direction: row;
+    }
+}
+
+.card {
+    flex: 1; /* Equal height and width */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333;
+    border-radius: 8px;
+    background: #171717;
+    color: #fafafa;
+}       
+                </code>
+            </pre>
+
         </div>
     </section>
     <!-- / Cards -->
